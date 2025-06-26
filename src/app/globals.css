@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', 'Geist', 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+/* --- Luxury Nav Link Override --- */
+.lux-nav-link,
+.lux-nav-link:visited {
+  color: #334155;
+  transition: color 0.2s;
+}
+.dark .lux-nav-link,
+.dark .lux-nav-link:visited {
+  color: #e0e7ef;
+}
+.lux-nav-link:hover,
+.lux-nav-link:focus,
+.lux-nav-link:active {
+  color: #06b6d4 !important;
+}
+.dark .lux-nav-link:hover,
+.dark .lux-nav-link:focus,
+.dark .lux-nav-link:active {
+  color: #06b6d4 !important;
+}
+.lux-nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #06b6d4 0%, #2563eb 100%) !important;
+  transition: width 0.3s;
+  border-radius: 1px;
+}
+.lux-nav-link:hover::after,
+.lux-nav-link:focus::after,
+.lux-nav-link:active::after {
+  width: 100%;
+}
