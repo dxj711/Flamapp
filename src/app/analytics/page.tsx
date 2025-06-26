@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Bar, Doughnut, Line } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -28,7 +28,20 @@ ChartJS.register(
 );
 
 export default function AnalyticsPage() {
-  const [users, setUsers] = useState<any[]>([]);
+    type User = {
+    id: number;
+    name: string;
+    email: string;
+    age: number;
+    department: string;
+    rating: number;
+    address: string;
+    phone: string;
+    bio: string;
+    performanceHistory: number[];
+  };
+  
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [bookmarkTrends, setBookmarkTrends] = useState<{month: string, count: number}[]>([]);
 
