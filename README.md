@@ -10,7 +10,6 @@ A modern, responsive HR Performance Dashboard for managers to track employee per
 - **Employee Details**: Dynamic profile page with tabs (Overview, Projects, Feedback)
 - **Bookmarks Manager**: List and manage bookmarked employees
 - **Analytics**: Department-wise average ratings and bookmark trends (Chart.js)
-- **Navigation & Layout**: Top nav, dark/light mode, mobile-friendly
 - **State Management**: Zustand for bookmarks and UI state
 - **Reusable Components**: Card, Badge, Button, Modal, Tabs, StarRating, DarkModeToggle
 
@@ -70,19 +69,5 @@ npm start
 - **Vercel:**
   - Push your code to GitHub.
   - Import your repo at [vercel.com](https://vercel.com) and deploy (auto-detects Next.js).
-- **Other platforms:**
-  - Netlify, AWS, Azure, etc. (all support Next.js).
-
 ---
 
-## ✨ Bonus Ideas
-- Add authentication (NextAuth.js)
-- Create User modal/page
-- Pagination or infinite scroll
-- Animations (Framer Motion)
-
----
-
-## 📄 License
-
-MIT
